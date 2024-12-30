@@ -1,0 +1,345 @@
+﻿/* General Styling */
+body {
+    background: linear-gradient(180deg, #ffffff 0%, /* White at the top */
+    #ffff00 25%, /* Yellow */
+    #ffa500 50%, /* Orange */
+    #ffffff 100% /* White at the bottom */
+    );
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50; /* Deep navy */
+    margin-top: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* High-Class Menu Styling */
+.menu-container {
+    background: url('/images/BackgroundDeng.jpg') center/cover no-repeat;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Keep the shadow */
+    padding: 10px 0;
+    overflow: hidden;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Optional border for separation */
+}
+
+.menu-title {
+    font-size: 1.5em; /* Smaller and elegant size */
+    font-weight: 600; /* Medium font weight for a clean look */
+    color: black; /* Gold color */
+    text-transform: uppercase; /* Uppercase for a premium look */
+    text-align: center; /* Center the text horizontally */
+    margin: 0 auto; /* Horizontally center */
+    font-family: 'Georgia', serif; /* Elegant serif font */
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+    padding: 10px 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #ccc transparent; /* Custom scrollbar */
+}
+
+    /* Custom Scrollbar Styling */
+    .menu::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .menu::-webkit-scrollbar-thumb {
+        background-color: #aaa;
+        border-radius: 10px;
+    }
+
+    .menu::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+/* Menu Box Styling */
+.menu-box {
+    flex: 0 0 auto;
+    min-width: 160px;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: black; /* Dark navy blue for better contrast */
+    text-align: center;
+    background: linear-gradient(145deg, #e67e22, #d35400); /* Luxurious darker orange gradient */
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), inset 2px 2px 4px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+    .menu-box:hover {
+        background: linear-gradient(145deg, #ff9e57, #ff6a00); /* Reverse gradient */
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu-box:active {
+        transform: translateY(2px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+/* Grid Layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Section Styling */
+section {
+    margin-top: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    section h2 {
+        text-align: center;
+        color: #2c3e50;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+/* Product Box Styling */
+.product-box {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .product-box:hover {
+        transform: scale(1.05);
+        box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15), -6px -6px 15px rgba(255, 255, 255, 0.8);
+    }
+
+.product-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 10px 0;
+}
+
+.quantity-input {
+    width: 80px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid #bdc3c7;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.1), inset -4px -4px 6px rgba(255, 255, 255, 0.7);
+}
+
+    .quantity-input:focus {
+        border-color: #3498db;
+        box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.2), inset -4px -4px 6px rgba(255, 255, 255, 0.8);
+    }
+
+.checkbox-label {
+    display: block;
+    margin: 10px auto;
+    font-size: 1em;
+    color: #34495e;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.deselect-button, .submit-button, .extra-button {
+    background: linear-gradient(145deg, #f2f2f2, #e0e0e0); /* Light gray gradient for default */
+    color: black; /* Dark text for contrast */
+    margin: 2px;
+    padding: 8px 23px; /* Smaller padding */
+    font-size: 0.9em; /* Smaller font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px; /* More subtle rounding */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    min-width: 100px; /* Minimum width to prevent shrinking too much */
+}
+
+.deselect-button {
+    background: linear-gradient(145deg, #ff4d4d, #d63031); /* Red gradient */
+    color: #fff;
+}
+
+.submit-button {
+    background: linear-gradient(145deg, #27ae60, #2ecc71); /* Green gradient */
+    color: #fff;
+}
+
+.extra-button {
+    background: linear-gradient(145deg, #3498db, #2980b9); /* Blue gradient */
+    color: #fff;
+}
+
+    .deselect-button:hover, .submit-button:hover, .extra-button:hover {
+        transform: translateY(-2px); /* Slight lift */
+    }
+
+    .deselect-button:active, .submit-button:active, .extra-button:active {
+        transform: translateY(1px); /* Pressed effect */
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+/* WhatsApp Button Container */
+.whatsapp-container {
+    text-align: center; /* Center the button */
+    margin: 20px 0; /* Spacing above and below */
+}
+
+/* WhatsApp Button Styling */
+.whatsapp-button {
+    background: linear-gradient(135deg, #25D366, #128C7E, #075E54); /* Gradient effect */
+    color: #fff; /* White text */
+    padding: 12px 25px; /* Spacing inside the button */
+    font-size: 1.2em; /* Text size */
+    font-weight: bold;
+    border: none;
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+    /* Hover Effect */
+    .whatsapp-button:hover {
+        background: linear-gradient(135deg, #128C7E, #25D366, #075E54); /* Darker gradient */
+        transform: scale(1.05); /* Slight zoom effect */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    }
+
+    /* Active (Click) Effect */
+    .whatsapp-button:active {
+        transform: scale(0.95); /* Slight shrink effect */
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Lighter shadow */
+    }
+
+.quantity-select {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Luxurious gradient */
+    color: #333;
+    padding: 5px 10px;
+    box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.1), inset -4px -4px 6px rgba(255, 255, 255, 0.7);
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+    .quantity-select:hover {
+        background: linear-gradient(145deg, #e6e6e6, #ffffff); /* Reverse gradient on hover */
+        border-color: #007BFF; /* Highlight border */
+    }
+
+    .quantity-select:focus {
+        outline: none;
+        border-color: #007BFF;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    }
+
+    /* Custom Arrow */
+    .quantity-select::after {
+        content: '▼'; /* Custom arrow */
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+        color: #666;
+        pointer-events: none;
+    }
+
+.review-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+    .review-button:hover {
+        background-color: #45a049;
+    }
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close-button:hover,
+    .close-button:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
